@@ -40,7 +40,7 @@ conky.config = {
 	own_window_type = 'desktop',
 	own_window_transparent = false,
 	own_window_argb_visual = true,
-	own_window_argb_value = 200,
+	own_window_argb_value = 250,
 	own_window_colour = '#AEA79F',
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 
@@ -128,11 +128,11 @@ ${voffset 6}${color1}${alignc}${time %d %B %Y}${voffset -6}${color}
 # - PHOTO - #
 #############
 ${voffset 4}${color0}${font Liberation Sans:style=Bold:size=8}PHOTO $stippled_hr${font}${color}
-${execi 10 /home/baosiek/Projects/conky-baosiek/conkycolors/bin/conkyPhotoRandom}${image /home/baosiek/Pictures/conky/conkyPhoto.jpg -s 170x105 -p 12,545}${voffset 98}
+${execi 10 /home/baosiek/Projects/conky-baosiek/conkycolors/bin/conkyPhotoRandom}${image /home/baosiek/Pictures/tmp/conkyPhoto.png -s 170x105 -p 12,545}${voffset 98}
 ###############
 # - NETWORK - #
 ###############
-${voffset -4}${color0}${font Liberation Sans:style=Bold:size=8}NETWORK $stippled_hr${font}${color}
+${voffset -2}${color0}${font Liberation Sans:style=Bold:size=8}NETWORK $stippled_hr${font}${color}
 # |--wlp62s0
 ${if_up wlp62s0}
 ${voffset -5}${color0}${font ConkyColors:size=15}s${font}${color}${goto 32}${voffset -12}${color1}Up: ${color}${font Liberation Sans:style=Bold:size=8}${color2}${upspeed wlp62s0}${color}${font}${alignr}${color5}${upspeedgraph wlp62s0 8,60 red red}${color}

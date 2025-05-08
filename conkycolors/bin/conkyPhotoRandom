@@ -3,8 +3,8 @@
 # Photo in conky
 # by helmuthdu, paulvictor and Alessandro Roncone
 
-source="/usr/share/backgrounds/"
-photo="/home/baosiek/Pictures/conky/conkyPhoto.jpg"
+source="/home/baosiek/Pictures/conky"
+photo="/home/baosiek/Pictures/tmp/conkyPhoto.png"
 systemdir=/home/baosiek/Projects/conky-baosiek/conkycolors/
 template="$systemdir/icons/ConkyPhoto"
 filename=`find $source \( -iname "*.png" -o -iname "*.jpg" \) | shuf -n1`
@@ -25,7 +25,10 @@ elif [[ $dim == "big" ]]; then
   geometry_crop="396x312"
 fi
 
-rm ${photo}
+if [[ -f ${photo} ]]; then
+  rm ${photo}
+fi
+
 cp ${filename} ${photo}
 
 convert ${filename} -resize ${geometry}\> \
