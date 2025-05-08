@@ -4,8 +4,8 @@
 # by helmuthdu, paulvictor and Alessandro Roncone
 
 source="/usr/share/backgrounds/"
-photo="/tmp/conkyPhoto.png"
-systemdir=$( conky-colors --systemdir )
+photo="/home/baosiek/Pictures/conky/conkyPhoto.jpg"
+systemdir=/home/baosiek/Projects/conky-baosiek/conkycolors/
 template="$systemdir/icons/ConkyPhoto"
 filename=`find $source \( -iname "*.png" -o -iname "*.jpg" \) | shuf -n1`
 
